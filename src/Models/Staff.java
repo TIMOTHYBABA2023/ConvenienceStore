@@ -1,11 +1,17 @@
+package Models;
+
+import Enums.Residence;
+
+import java.util.List;
+
 public abstract class Staff {
 
     private String firstName;
     private String lastName;
     private String gender;
-    private String residentialState;
+    private Residence residentialState;
 
-    public Staff(String firstName, String lastName, String gender, String residentialState) {
+    public Staff(String firstName, String lastName, String gender, Residence residentialState) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.gender = gender;
@@ -14,6 +20,12 @@ public abstract class Staff {
 
     public Staff() {
     }
+
+    public Staff(String firstName, String lastName) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+    }
+
 
     public String getFirstName() {
         return firstName;
@@ -39,11 +51,11 @@ public abstract class Staff {
         this.gender = gender;
     }
 
-    public String getResidentialState() {
+    public Residence getResidentialState() {
         return residentialState;
     }
 
-    public void setResidentialState(String residentialState) {
+    public void setResidentialState(Residence residentialState) {
         this.residentialState = residentialState;
     }
 
@@ -53,7 +65,7 @@ public abstract class Staff {
                 "firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
                 ", gender='" + gender + '\'' +
-                ", residentialState='" + residentialState + '\'' +
+                ", residentialState=" + residentialState +
                 '}';
     }
 }
