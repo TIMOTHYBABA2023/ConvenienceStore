@@ -8,5 +8,5 @@ import java.util.List;
 
 public interface CustomerServiceImpl {
 
-    public List<Product> buyProduct(Store store, Product product);
+    public List<Product> buyProduct(Store store, Product product, int productAmount);
 }

@@ -61,10 +61,10 @@ public class Customer implements CustomerServiceImpl {
     }
 
     @Override
-    public List<Product> buyProduct(Store store, Product product) {
+    public List<Product> buyProduct(Store store, Product product, int productAmount) {
         List<Product> cart = getCart();
         List<Product> storeProduct = store.getProduct();
-
+        int productAmountBought = productAmount;
         for (Product productAdded : storeProduct) {
             if (product.getProductName().equals(productAdded.getProductName())) {
                 cart.add(productAdded);

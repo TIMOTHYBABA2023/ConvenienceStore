@@ -42,14 +42,6 @@ public class Product {
         this.productQuantity = productQuantity;
     }
 
-    public void availableProducts(){
-
-        productList.forEach(nameOfProducts -> {
-            if (nameOfProducts.getProductQuantity() > 0) {
-                System.out.println(nameOfProducts.getProductName());
-            } else System.out.println(nameOfProducts.getProductName() + " is out of Stock");
-        });
-    }
 
     @Override
     public String toString() {

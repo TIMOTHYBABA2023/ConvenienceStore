@@ -111,7 +111,7 @@ public class Main {
         String solar = cashier2.sellProducts(customer2);
 
         System.out.println(solar);
-
+        
 
 
         //I/O Manipulation...
